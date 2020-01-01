@@ -1,5 +1,5 @@
 # Backend Software Development Exercise
-##Objective
+## Objective
 Build an API service with a database backend for storing and editing a movie collection. Please
 use a technology stack of your choosing to deliver the application, though use of AWS
 infrastructure is recommended.
@@ -13,7 +13,7 @@ are fine.
 3. You’ll need to deploy your application to a hosting service of your choosing (AWS,
 DigitalOcean, Azure, etc). Free tiers should be sufficient.
 
-##Requirements
+## Requirements
 
 1. The service must be accessible over http using a command line interface (curl, node,
 etc.); a GUI is not necessary.
