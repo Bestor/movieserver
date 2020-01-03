@@ -36,7 +36,8 @@ TEMPLATES = [
     }
 ]
 
-MIDDLEWARE = ['django.contrib.auth.middleware.AuthenticationMiddleware',
+MIDDLEWARE = ['django.contrib.sessions.middleware.SessionMiddleware',
+              'django.contrib.auth.middleware.AuthenticationMiddleware',
               'django.contrib.messages.middleware.MessageMiddleware',
               'django.contrib.sessions.middleware.SessionMiddleware']
 
@@ -54,3 +55,6 @@ DATABASES = {
 STATIC_ROOT = DIRNAME + '/static/'
 STATIC_URL = '/static/'
 ROOT_URLCONF = 'movieserver.urls'
+
+# I know this is bad but I'm doing it during development
+ALLOWED_HOSTS = ['*']

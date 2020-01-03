@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
-from models import Movies
+from .models import Movies
 from rest_framework import routers, serializers, viewsets
 
 # Serializers define the API representation.
