@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  database:
+    build: Dockerfiles/postgres
+  django:
+    build:
+      context: ./
+      dockerfile: Dockerfiles/django/Dockerfile
+    ports:
+      - "8000:8000"
