@@ -47,11 +47,26 @@ DATABASES = {
         'NAME': 'movieservicedb',
         'USER': 'postgres',
         'PASSWORD': 'mysecretpassword',
-        'HOST': 'josh-stack.vse.rdlabs.hpecorp.net',  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '12345',  # Set to empty string for default.
+        'HOST': os.environ['DATABASE'],  # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': 12345,  # Set to empty string for default.
     }
 }
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler'
+        },
+    },
+    'loggers': {
+        '': {  # 'catch all' loggers by referencing it with the empty string
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
 STATIC_ROOT = DIRNAME + '/static/'
 STATIC_URL = '/static/'
 ROOT_URLCONF = 'movieserver.urls'

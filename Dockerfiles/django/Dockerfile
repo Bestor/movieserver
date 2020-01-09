@@ -9,4 +9,4 @@ RUN chmod +x Dockerfiles/django/run.sh
 
 WORKDIR /usr/src/app/movieserver/movieserver
 
-CMD [ "./manage.py runserver 0.0.0.0:8000" ]
+CMD [ "./run.sh" ]

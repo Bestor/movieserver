@@ -2,9 +2,22 @@ version: "3.3"
 services:
   database:
     build: Dockerfiles/postgres
+    ports:
+      - "12345:5432"
+    networks:
+      - backend
   django:
     build:
       context: ./
       dockerfile: Dockerfiles/django/Dockerfile
     ports:
       - "8000:8000"
+    networks:
+      - backend
+    environment:
+      - DATABASE=${DATABASE}
+    depends_on:
+      - database
+networks:
+  backend:
+    driver: "bridge"
