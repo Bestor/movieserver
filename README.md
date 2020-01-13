@@ -4,6 +4,20 @@ The application will be able to read, write edit, delete, and list movies.
 
 Although it is not necessary for this project I will plan on making an initial commit to master and then after that I will be working on a dev branch and merging code to master via pull requests from my dev branch. This is mostly to demonstrate that I can use a normal team git workflow.
 
+# Results
+
+I did not complete the following things:
+
+- There is no UPDATE or DELETE methods
+- There is no sorting functionality
+- There is no authentication
+
+All the other requirements were met. I had issues with the docker-compose file for quite some time because I couldn't get the services to link over the internal docker network. I worked around it by just mounting the appropriate ports to the host and going through the host networking. 
+
+In hindsight, I wish I had spent less time on the docker-compose file and more time meeting the requirements and automating deployment to AWS. Overall I am happy with the progress I made though. The django-rest-framework was definitely the right tool and made creating the API itself very easy. The GUI it provided was extremely useful for testing so I didn't have to access everything via GET requests with curl.
+
+Using AWS was a good experience as well. I initially tried to use AWS Fargate but I found that I could get my containers hosted but I was having issues getting them to link so in the interest of time I spun up an EC2 container and deployed the containers into it. This was very easy and smooth.
+
 # Plan of attack
 
 - I will create the application using django. I chose it for three reasons. 
